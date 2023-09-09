@@ -18,7 +18,7 @@ public class ApiController {
         response.setCurrentDay(LocalDateTime.now().getDayOfWeek().toString());
         response.setUtcTime(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
         response.setTrack("backend");
-        response.setGithubFileUrl("");
+        response.setGithubFileUrl("https://github.com/SamuelAbiodun-dev/HNGX_backend_first_task/blob/main/src/main/java/com/hngx/backendStageOneTask/ApiController.java");
         response.setGithubRepoUrl("https://github.com/SamuelAbiodun-dev/HNGX_backend_first_task");
         response.setStatusCode(200);
 

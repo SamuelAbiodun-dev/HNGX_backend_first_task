@@ -21,7 +21,6 @@ public class ApiController {
         response.setGithubFileUrl("https://github.com/SamuelAbiodun-dev/HNGX_backend_first_task/blob/main/src/main/java/com/hngx/backendStageOneTask/ApiController.java");
         response.setGithubRepoUrl("https://github.com/SamuelAbiodun-dev/HNGX_backend_first_task");
         response.setStatusCode(200);
-
         return response;
     }
 }

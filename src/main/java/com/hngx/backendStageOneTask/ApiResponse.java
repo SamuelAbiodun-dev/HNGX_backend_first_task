@@ -1,5 +1,6 @@
 package com.hngx.backendStageOneTask;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,11 +9,18 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class ApiResponse {
-    private String slackName;
-    private String currentDay;
-    private String utcTime;
+    @JsonProperty
+    private String slack_name;
+    @JsonProperty
+    private String current_day;
+    @JsonProperty
+    private String utc_time;
+    @JsonProperty
     private String track;
-    private String githubFileUrl;
-    private String githubRepoUrl;
-    private int statusCode;
+    @JsonProperty
+    private String github_file_url;
+    @JsonProperty
+    private String github_repo_url;
+    @JsonProperty
+    private int status_code;
 }

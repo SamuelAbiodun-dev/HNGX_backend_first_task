@@ -2,6 +2,7 @@ package com.hngx.backendStageOneTask;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
@@ -12,12 +13,12 @@ import java.time.format.DateTimeFormatter;
 public class ApiController {
 
     @GetMapping("/firstApi")
-    public ApiResponse getExampleApiResponse() {
+    public ApiResponse getExampleApiResponse(@RequestParam String slack_name, @RequestParam String track) {
         ApiResponse response = new ApiResponse();
-        response.setSlackName("SamuelAbiodun");
+        response.setSlackName(slack_name);
         response.setCurrentDay(LocalDateTime.now().getDayOfWeek().toString());
         response.setUtcTime(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
-        response.setTrack("backend");
+        response.setTrack(track);
         response.setGithubFileUrl("https://github.com/SamuelAbiodun-dev/HNGX_backend_first_task/blob/main/src/main/java/com/hngx/backendStageOneTask/ApiController.java");
         response.setGithubRepoUrl("https://github.com/SamuelAbiodun-dev/HNGX_backend_first_task");
         response.setStatusCode(200);

@@ -9,10 +9,10 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 @RestController
-@RequestMapping("/backendFirstTask")
+@RequestMapping("/api")
 public class ApiController {
 
-    @GetMapping("/firstApi")
+    @GetMapping()
     public ApiResponse getExampleApiResponse(@RequestParam String slack_name, @RequestParam String track) {
         ApiResponse response = new ApiResponse();
         response.setSlackName(slack_name);
